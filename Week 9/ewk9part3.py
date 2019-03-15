@@ -24,6 +24,8 @@ print(newstack)
 
 
 
+
+
 def postFix(str):
 
     listofcommands=str.split(" ")
