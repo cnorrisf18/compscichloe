@@ -19,23 +19,9 @@ def buildRules(ruleString):
         ruledict[entry[0]] = entry[1]
     return axiom, ruledict
 
-command="""A
-A-->BAB
-B-->+F--FF++F-
-"""
+def applyRuleSet(ruledict, leftChar):
 
-
-
-print(buildRules(command))
-
-
-def applyRuleSet(ruleSet, leftChar):
-
-    for rule in ruleSet:
-        if leftChar == ruleSet[0]:
-            return ruleSet[1]
-
-    return leftChar
+    return ruleSet.get(leftChar, leftChar)
 
 def applyRules(leftChar):
     """ apply rule transforming leftChar to rightStr
